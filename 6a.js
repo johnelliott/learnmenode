@@ -5,7 +5,8 @@ var extension = process.argv[3];
 
 var sixb = require('./6b.js');
 
-// call my function, passing path and extension
-// print to console form here
-
-console.log(sixb(directory, extension));
+var results = sixb(directory, extension, function(err, files) {
+	for (i=0; i<files.length; i++) {
+		console.log(files[i]);
+	}
+});

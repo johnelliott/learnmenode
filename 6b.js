@@ -5,20 +5,15 @@ var fs = require('fs');
 var path = require('path');
 
 module.exports = function (directory, extension, callback) {
-    var answer = fs.readdir(directory, callback);
-    return answer;
-};
+  fs.readdir(directory, function (err, files) {
+    if (err) return callback(err);
 
-function callback (err, files) {
-    if (err)
-	return callback(err);
     var array = [];
-    //    debugger;
     for (i=0; i<files.length; i++) {
-	if (path.extname(files[i]) == '.' + extension) {
-	    //	    debugger;
-	    array.push(files[i]);
-	}
+      if (path.extname(files[i]) == '.' + extension) {
+        array.push(files[i]);
+      }
     }
-    return (null, array);
-}
+    return callback(null, array);
+  });
+};
