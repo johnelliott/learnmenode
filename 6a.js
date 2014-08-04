@@ -10,3 +10,22 @@ var results = sixb(directory, extension, function(err, files) {
 		console.log(files[i]);
 	}
 });
+
+// solution_filter.js:
+
+//     var fs = require('fs')
+//     var path = require('path')
+    
+//     module.exports = function (dir, filterStr, callback) {
+    
+//       fs.readdir(dir, function (err, list) {
+//         if (err)
+//           return callback(err)
+    
+//         list = list.filter(function (file) {
+//           return path.extname(file) === '.' + filterStr
+//         })
+    
+//         callback(null, list)
+//       })
+//     }
