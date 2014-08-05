@@ -1,0 +1,25 @@
+{
+  "name": "learnmenode",
+  "version": "0.0.0",
+  "description": "my files for nodeschool's learn you node",
+  "main": "1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/johnelliott/learnmenode.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "john elliott",
+  "license": "MIT?",
+  "bugs": {
+    "url": "https://github.com/johnelliott/learnmenode/issues"
+  },
+  "dependencies": {
+      "concat-stream": "~1.4.6",
+      "bl": "~0.9.0"
+  }
+}
