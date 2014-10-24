@@ -15,14 +15,16 @@ function packurls(urls) {
 
 var pack = packurls(testurls);	// Change packed var before submit
 
-http.get(pack[i], function(response) {
+function getstrings (url) {
+    http.get(url, function(response) {
 	var result = '';
 	response.setEncoding('utf8');
 	response.on('data', function(chunk) {
-		result = result + chunk;
+	    result = result + chunk;
 	}).on('error', function(error) {
-		console.log("There's an error: " + error.message);
+	    console.log("There's an error: " + error.message);
 	}).on('end', function () {
-		console.log(result.length + "\n" + result);
+	    console.log(result.length + "\n" + result);
 	});
-});
+    });
+}

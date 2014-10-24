@@ -1,0 +1,22 @@
+first it calls the 6b function, passing in the directory, extension, and afterwork function for it to use
+	does async function, passing in the directory and afterwork function
+		handles errors
+
+so the directory is passed all the way in to the async function
+when it's done, it returns data to the function, which builds an array
+when that's done, the initial callback function does the last work
+
+so on this next one, first I can build my input data without worrying about async
+then i'll write my final callback, which is printing out in order of queue
+then write the callback to fill the urls, and pass that into the url async function
+
+so again:
+make input data
+call http.get(urlpack, callback) {
+	fill the urls(urlpack, callback) {
+		print the urls
+	}
+}
+so again:
+build
+async(urlpack, fillerfunction(urpack, printerfunction(urlpack, logic)));
